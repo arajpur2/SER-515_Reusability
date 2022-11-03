@@ -9,6 +9,7 @@ import java.util.Iterator;
  * @version 1.0
  */
 
+@SuppressWarnings("rawtypes")
 public class CourseIterator implements Iterator {
   public ClassCourseList getTheCourseList() {
     return theCourseList;

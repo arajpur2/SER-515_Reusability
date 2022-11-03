@@ -10,19 +10,19 @@ class SolutionIteratorTest {
 	Solution solution = new Solution();
 
 	@Test
-	void testSolutionIterator() {
+	void solutionIterator() {
 		new SolutionIterator();
 	}
 
 	@Test
-	void testSolutionIteratorSolutionList() {
+	void solutionIteratorSolutionList() {
 		solutionList.add(solution);
 		SolutionIterator solutionIterator = new SolutionIterator(solutionList);
 		assertTrue(solutionIterator.hasNext());
 	}
 
 	@Test
-	void testMoveToHead() {
+	void moveToHead() {
 		int expected = -1;
 		solutionList.add(solution);
 		SolutionIterator solutionIterator = new SolutionIterator(solutionList);
@@ -31,21 +31,21 @@ class SolutionIteratorTest {
 	}
 
 	@Test
-	void testHasNext() {
+	void hasNext() {
 		solutionList.add(solution);
 		SolutionIterator solutionIterator = new SolutionIterator(solutionList);
 		assertTrue(solutionIterator.hasNext());
 	}
 
 	@Test
-	void testNext() {
+	void next() {
 		solutionList.add(solution);
 		SolutionIterator solutionIterator = new SolutionIterator(solutionList);
 		assertNotNull(solutionIterator.next());
 	}
 
 	@Test
-	void testNextString() {
+	void nextString() {
 		solution.setTheAuthor("Alok Rajpurohit");
 		solutionList.add(solution);
 		SolutionIterator solutionIterator = new SolutionIterator(solutionList);
@@ -53,7 +53,7 @@ class SolutionIteratorTest {
 	}
 
 	@Test
-	void testRemove() {
+	void remove() {
 		int expected = 0;
 		solutionList.add(solution);
 		SolutionIterator solutionIterator = new SolutionIterator(solutionList);
