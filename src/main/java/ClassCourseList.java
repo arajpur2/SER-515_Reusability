@@ -3,7 +3,7 @@ import java.io.*;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
- * 
+ *
  * @author Zhang ji Zhu Wei
  * @version 1.0
  * @author mjfindler
@@ -16,7 +16,7 @@ public class ClassCourseList extends ArrayList<Course> {
 	}
 
 	//// initialize the list by reading from the file.
-	void InitializeFromFile(String theFileName) {
+	void initializeFromFile(String theFileName) {
 		try {
 			BufferedReader file;
 			String strCourseName = null;
@@ -27,17 +27,16 @@ public class ClassCourseList extends ArrayList<Course> {
 //      theCourse.CourseName= strCourseName;
 				add(theCourse);
 			}
-		} catch (Exception ee) {
-			;
+		} catch (Exception e) {
+			System.out.println("DATABASE READ ERROR");
 		}
 	}
 
-	Course FindCourseByCourseName(String CourseName) {
-		int nCourseCount = size();
-		for (int i = 0; i < nCourseCount; i++) {
+	Course findCourseByCourseName(String courseName) {
+		for (Course course : this) {
 			Course theCourse;
-			theCourse = (Course) get(i);
-			if (theCourse.CourseName.compareTo(CourseName) == 0)
+			theCourse = course;
+			if (theCourse.CourseName.compareTo(courseName) == 0)
 				return theCourse;
 		}
 		return null;
