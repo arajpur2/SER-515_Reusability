@@ -9,61 +9,49 @@ import java.util.Iterator;
  * @version 1.0
  */
 
-public class SolutionIterator implements Iterator
-{
+public class SolutionIterator implements Iterator {
   SolutionList solutionlist;
 
-  ///  CurrentSolutionNumber: point to the location before the first element
+  //CurrentSolutionNumber: point to the location before the first element
   int CurrentSolutionNumber=-1;
 
-  public SolutionIterator()
-  {
-  }
-  public SolutionIterator(SolutionList thesolutionlist)
-  {
-    solutionlist=thesolutionlist;
-    MoveToHead();
+  public int getCurrentSolutionNumber() {
+    return CurrentSolutionNumber;
   }
 
-  public void MoveToHead()
-  {
-  ///  CurrentSolutionNumber: point to the location before the first element
+  public SolutionIterator() {
+  }
+
+  public SolutionIterator(SolutionList thesolutionlist) {
+    solutionlist=thesolutionlist;
+    moveToHead();
+  }
+
+  public void moveToHead() {
+  //CurrentSolutionNumber: point to the location before the first element
     CurrentSolutionNumber=-1;
   }
 
-  public boolean hasNext()
-  {
-    /**@todo: Implement this java.util.Iterator method*/
-    if (CurrentSolutionNumber>=solutionlist.size()-1)
-      return false;
-    else
-      return true;
-//    throw new java.lang.UnsupportedOperationException("Method hasNext() not yet implemented.");
+  public boolean hasNext() {
+    return CurrentSolutionNumber < solutionlist.size() - 1;
   }
-  public Object next()
-  {
-    /**@todo: Implement this java.util.Iterator method*/
-    if (hasNext()==true)
-    {
+
+  public Object next() {
+    if (hasNext()) {
       CurrentSolutionNumber ++;
       return solutionlist.get(CurrentSolutionNumber);
     }
-    else
-    {
+    else {
       return null;
     }
-    //    throw new java.lang.UnsupportedOperationException("Method next() not yet implemented.");
   }
 
-  /// get the next Solution that fits the Username;
-  public Object next(String UserName)
-  {
+  // get the next Solution that fits the Username;
+  public Object next(String UserName) {
     Solution theSolution;
     theSolution=(Solution)next();
-    while(theSolution!=null)
-    {
-      if(UserName.compareTo(theSolution.theAuthor)==0)
-      {
+    while(theSolution!=null) {
+      if(UserName.compareTo(theSolution.theAuthor)==0) {
         return theSolution;
       }
       theSolution=(Solution)next();
@@ -71,11 +59,8 @@ public class SolutionIterator implements Iterator
     return null;
   }
 
-  public void remove()
-  {
-    /**@todo: Implement this java.util.Iterator method*/
+  public void remove() {
     solutionlist.remove(CurrentSolutionNumber);
-//    throw new java.lang.UnsupportedOperationException("Method remove() not yet implemented.");
   }
 
 
