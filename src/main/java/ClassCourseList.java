@@ -36,7 +36,7 @@ public class ClassCourseList extends ArrayList<Course> {
 		for (Course course : this) {
 			Course theCourse;
 			theCourse = course;
-			if (theCourse.CourseName.compareTo(courseName) == 0)
+			if (theCourse.courseName.compareTo(courseName) == 0)
 				return theCourse;
 		}
 		return null;

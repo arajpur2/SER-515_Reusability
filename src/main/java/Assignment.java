@@ -22,8 +22,8 @@ public class Assignment {
   protected boolean isAccepted;
 
 
-  public Assignment(boolean isAccepted) {
-    this.isAccepted = isAccepted;
+  public Assignment() {
+    this.isAccepted = false;
   }
 
   public void setDueDate(Date theDueDate){
