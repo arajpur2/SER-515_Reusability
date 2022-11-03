@@ -8,39 +8,50 @@ import java.util.*;
  * @author Ji Zhang, Wei Zhu
  * @version 1.0
  * @author mjfindler
- * @version 2.0 
+ * @version 2.0
  * Update to Java 8
  */
 
 public class Course {
-  String CourseName;
+  String courseName;
   public ArrayList<Assignment> assignmentList=new ArrayList<Assignment>();
-  int NumOfAss;
-  int CourseLevel;
+  int numOfAss;
+  int courseLevel;
 
+  boolean isAccepted;
+
+
+  public int getCourseLevel() {
+    return courseLevel;
+  }
 
   public Course(String strCourse, int theLevel) {
-    this.CourseName = strCourse;
+    this.courseName = strCourse;
 
-   //0 HighLeve presentation    1  LowLevel Experiment
-    this.CourseLevel = theLevel;
+   //0: HighLevel    1: LowLevel Experiment
+    this.courseLevel = theLevel;
    // this.AssList = NULL;
-    this.NumOfAss = 0;
+    this.numOfAss = 0;
+    this.isAccepted = false;
   }
-  
-  public void AddAssignment(Assignment newAss)
+
+  public void addAssignment(Assignment newAss)
   {
     assignmentList.add(newAss);
   }
-  
+
   public String toString()
   {
-    return CourseName;
+    return courseName;
   }
-  
-  void accept(NodeVisitor visitor)
-  {
+
+  void accept(NodeVisitor visitor) {
     visitor.visitCourse(this);
+    this.isAccepted = true;
+  }
+
+  public boolean isAccepted() {
+    return this.isAccepted;
   }
 
 }
