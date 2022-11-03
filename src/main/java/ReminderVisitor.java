@@ -3,31 +3,31 @@ import java.util.*;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
- * 
+ *
  * @author Zhang ji Zhu Wei
  * @version 1.0
  * @author mjfindler
- * @version 2.0 
- * 
+ * @version 2.0
+ *
  * update to Java 8
  */
 
 /*
- * this class will iterate the course list attatched to on student and in turn
+ * this class will iterate the course list attached to on student and in turn
  * iterate the assignments of a course. after Function Visit(CourseList) it will
- * point to the location before the fist class, hasNext will retrun weather
+ * point to the location before the fist class, hasNext will rerun weather
  * there is next item. the next() will return the next Item Assignment;
  */
 
 public class ReminderVisitor extends NodeVisitor {
 
-	Reminder m_Reminder;
+	Reminder mReminder;
 
 	public ReminderVisitor() {
 	}
 
 	public ReminderVisitor(Reminder reminder) {
-		m_Reminder = reminder;
+		mReminder = reminder;
 	}
 
 	public void visitFacade(Facade facade) {
@@ -38,11 +38,17 @@ public class ReminderVisitor extends NodeVisitor {
 		}
 	}
 
+	public Reminder getmReminder() {
+		return mReminder;
+	}
+
 	public void visitCourse(Course course) {
 		Iterator<Assignment> assignmentList = course.assignmentList.listIterator();
-		while (assignmentList.hasNext()) {
-			Assignment assignment = (Assignment) assignmentList.next();
-			assignment.accept(this);
+		if (assignmentList.hasNext()) {
+			do {
+				Assignment assignment = assignmentList.next();
+				assignment.accept(this);
+			} while (assignmentList.hasNext());
 		}
 	}
 
@@ -50,17 +56,15 @@ public class ReminderVisitor extends NodeVisitor {
 		Date today = new Date();
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(today);
-		int ntoday = calendar.get(Calendar.DAY_OF_YEAR);
-		calendar.setTime(assignment.DueDate);
+		int nToday = calendar.get(Calendar.DAY_OF_YEAR);
+		calendar.setTime(assignment.dueDate);
 		int nDueDate = calendar.get(Calendar.DAY_OF_YEAR);
-		if (nDueDate <= (ntoday + 1) && nDueDate >= ntoday) /// upcoming
-		{
-			m_Reminder.listUpcoming.add("today is " + today.toString() + " " + assignment.AssName + " Due Date is "
+		if (nDueDate <= (nToday + 1) && nDueDate >= nToday) {
+			mReminder.listUpcoming.add("today is " + today + " " + assignment.assName + " Due Date is "
 					+ assignment.getDueDateString());
 		}
-		if (nDueDate < ntoday) {
-			// put to the
-			m_Reminder.listOverdue.add(assignment.AssName + " Due Date is " + assignment.getDueDateString());
+		if (nDueDate < nToday) {
+			mReminder.listOverdue.add(assignment.assName + " Due Date is " + assignment.getDueDateString());
 		}
 
 	}
