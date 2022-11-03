@@ -9,14 +9,16 @@ import java.util.Iterator;
  * @version 1.0
  */
 
-public class CourseIterator implements Iterator
-{
+public class CourseIterator implements Iterator {
+  public ClassCourseList getTheCourseList() {
+    return theCourseList;
+  }
+
   ClassCourseList theCourseList;
   int CurrentCourseNumber=-1;
 
 
-  public CourseIterator()
-  {
+  public CourseIterator() {
   }
 
   public CourseIterator(ClassCourseList courseList)
@@ -24,40 +26,31 @@ public class CourseIterator implements Iterator
     theCourseList=courseList;
   }
 
-  public boolean hasNext()
-  {
-    if (CurrentCourseNumber>=theCourseList.size()-1)
-      return false;
-    else
-      return true;
+  public boolean hasNext() {
+    return CurrentCourseNumber < theCourseList.size() - 1;
   }
 
-  public Object next()
-  {
-    if (hasNext()==true)
-    {
+  public Object next() {
+    if (hasNext()) {
       CurrentCourseNumber ++;
       return theCourseList.get(CurrentCourseNumber);
     }
-    else
-    {
+    else {
       return null;
     }
   }
+
   public void remove()
   {
     theCourseList.remove(CurrentCourseNumber);
   }
 
 // the next Course that fits the given CourseName
-  public Object next(String CourseName)
-  {
+  public Object next(String CourseName) {
     Course theCourse;
     theCourse=(Course)next();
-    while(theCourse!=null)
-    {
-      if(CourseName.compareTo(theCourse.toString())==0)
-      {
+    while(theCourse!=null) {
+      if(CourseName.compareTo(theCourse.toString())==0) {
         return theCourse;
       }
       theCourse=(Course)next();
