@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="solution test cases created">
+      <change afterPath="$PROJECT_DIR$/src/test/java/FacadeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HacsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SolutionListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StudentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Facade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Hacs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hacs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/College Work/Sem 1/Foundations of SE/SER-515_Reusability",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/College Work/Sem 1/Foundations of SE/SER-515_Reusability/src/test/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Reusability\src\test\java" />
+      <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Reusability\src\main\java" />
       <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Resusability\src\main\java" />
     </key>
   </component>
@@ -60,7 +74,84 @@
       <option name="project" value="LOCAL" />
       <updated>1667268556352</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added the classes">
+      <created>1667269227572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667269227572</updated>
+    </task>
+    <task id="LOCAL-00003" summary="assignment class test cases created">
+      <created>1667515031387</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667515031387</updated>
+    </task>
+    <task id="LOCAL-00004" summary="course info database created">
+      <created>1667515780155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667515780155</updated>
+    </task>
+    <task id="LOCAL-00005" summary="course list tests created">
+      <created>1667515920234</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667515920234</updated>
+    </task>
+    <task id="LOCAL-00006" summary="course test cases created">
+      <created>1667517032380</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667517032380</updated>
+    </task>
+    <task id="LOCAL-00007" summary="course list modification">
+      <created>1667517080928</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667517080928</updated>
+    </task>
+    <task id="LOCAL-00008" summary="course iterator tests created">
+      <created>1667517639958</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667517639958</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Instructor tests created">
+      <created>1667518076273</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667518076273</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Iterator and visitor tests created">
+      <created>1667518646218</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667518646218</updated>
+    </task>
+    <task id="LOCAL-00011" summary="solution iterator tests created">
+      <created>1667518951351</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667518951351</updated>
+    </task>
+    <task id="LOCAL-00012" summary="solution test cases created">
+      <created>1667519653477</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667519653477</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,6 +167,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="added the classes" />
+    <MESSAGE value="assignment class test cases created" />
+    <MESSAGE value="course info database created" />
+    <MESSAGE value="course list tests created" />
+    <MESSAGE value="course test cases created" />
+    <MESSAGE value="course list modification" />
+    <MESSAGE value="course iterator tests created" />
+    <MESSAGE value="Instructor tests created" />
+    <MESSAGE value="Iterator and visitor tests created" />
+    <MESSAGE value="solution iterator tests created" />
+    <MESSAGE value="solution test cases created" />
+    <option name="LAST_COMMIT_MESSAGE" value="solution test cases created" />
   </component>
 </project>

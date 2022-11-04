@@ -2,7 +2,7 @@
  * Title: HACS Description: CSE870 Homework 3: Implementing Design Patterns
  * Copyright: Copyright (c) 2002 Company: Department of Computer Science and
  * Engineering, Michigan State University
- * 
+ *
  * @author Ji Zhang, Wei Zhu
  * @version 1.0
  */
@@ -13,9 +13,9 @@ public class Student extends Person {
 		type = 0; // type=0: student
 	}
 
-	public CourseMenu CreateCourseMenu(Course theCourse, int theLevel) {
+	public CourseMenu createCourseMenu(Course theCourse, int theLevel) {
 
-		if (theLevel == 0) // 0: Highlevel defined in CourseSelectDlg.
+		if (theLevel == 0) // 0: High level defined in CourseSelectDlg.
 		{
 			theCourseMenu = new HighLevelCourseMenu();
 		} else // 1: LowLevel
@@ -26,8 +26,8 @@ public class Student extends Person {
 	}
 
 	@Override
-	public boolean ShowMenu() {
-		super.ShowMenu();
+	public boolean showMenu() {
+		super.showMenu();
 		showViewButtons();
 		showComboxes();
 		showRadios();

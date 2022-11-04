@@ -2,18 +2,18 @@ import java.io.*;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
- * 
+ *
  * @author Zhang ji Zhu Wei
  * @version 1.0
  * @author mjfindler
  * @version 2.0
- * 
+ *
  *          Update to Jave 8
  */
 
 public class Facade {
 	public int UserType;
-	private Course theSelecteCourse = null;
+	private Course theSelectedCourse = null;
 	private int nCourseLevel = 0;
 	ClassCourseList theCourseList;
 	Person thePerson;
@@ -50,7 +50,7 @@ public class Facade {
 		}
 		Assignment theAssignment = new Assignment();
 		theAssignmentMenu.ShowMenu(theAssignment, thePerson);
-		theCourse.AddAssignment(theAssignment);
+		theCourse.addAssignment(theAssignment);
 	}
 
 	/*
@@ -85,7 +85,7 @@ public class Facade {
 	void ReportSolutions(Assignment theAssignment) {
 		Solution theSolution;
 		SolutionIterator theSolutionIterator;
-		theSolutionIterator = theAssignment.GetSolutionIterator();
+		theSolutionIterator = theAssignment.getSolutionIterator();
 		theSolution = (Solution) theSolutionIterator.next();
 		while (theSolution != null) {
 			theSolution.setReported(true);
@@ -96,7 +96,7 @@ public class Facade {
 
 //functions for StudentAssignmentMenu
 	void SubmitSolution(Assignment theAssignment, Solution theSolution) {
-		theAssignment.AddSolution(theSolution);
+		theAssignment.addSolution(theSolution);
 	}
 
 //////////
@@ -121,7 +121,7 @@ public class Facade {
 	 */
 	void CreateCourseList() {
 		theCourseList = new ClassCourseList();
-		theCourseList.InitializeFromFile("CourseInfo.txt");
+		theCourseList.initializeFromFile("CourseInfo.txt");
 	}
 
 	/*
@@ -140,10 +140,10 @@ public class Facade {
 				strCourseName = GetCourseName(aline);
 				if (strUserName.compareTo(thePerson.UserName) == 0) /// the UserName mateches
 				{
-					theSelecteCourse = FindCourseByCourseName(strCourseName);
-					if (theSelecteCourse != null) /// Find the Course in the CourseList--->attach
+					theSelectedCourse = FindCourseByCourseName(strCourseName);
+					if (theSelectedCourse != null) /// Find the Course in the CourseList--->attach
 					{
-						thePerson.AddCourse(theSelecteCourse);
+						thePerson.AddCourse(theSelectedCourse);
 					}
 				}
 			}
@@ -176,8 +176,8 @@ public class Facade {
 	 */
 	public boolean SelectCourse() {
 		CourseSelectDlg theDlg = new CourseSelectDlg();
-		theSelecteCourse = theDlg.ShowDlg(thePerson.CourseList);
-		thePerson.CurrentCourse = theSelecteCourse;
+		theSelectedCourse = theDlg.ShowDlg(thePerson.CourseList);
+		thePerson.CurrentCourse = theSelectedCourse;
 		nCourseLevel = theDlg.nCourseLevel;
 		return theDlg.isLogout();
 	}
@@ -189,8 +189,8 @@ public class Facade {
 	 */
 
 	public boolean CourseOperation() {
-		thePerson.CreateCourseMenu(theSelecteCourse, nCourseLevel);
-		return thePerson.ShowMenu();//// 0: logout 1 select an other course
+		thePerson.createCourseMenu(theSelectedCourse, nCourseLevel);
+		return thePerson.showMenu();//// 0: logout 1 select an other course
 	}
 
 	/*

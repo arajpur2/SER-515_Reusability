@@ -1,5 +1,7 @@
 import java.text.DateFormat;
 import java.util.Date;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,7 +21,7 @@ public class AssignmentTest {
 
 	@Test
 	void isOverDue() {
-		assertEquals(true, assignment.isOverDue());
+		Assertions.assertTrue(assignment.isOverDue());
 	}
 
 	@Test
@@ -41,6 +43,7 @@ public class AssignmentTest {
 		assertEquals("Alok Rajpurohit", assignment.getSolution("Alok Rajpurohit").getTheAuthor());
 	}
 
+	@SuppressWarnings("ConstantConditions")
 	@Test
 	void getSuggestSolution() {
 		assertTrue(assignment.getSuggestSolution() instanceof Solution);

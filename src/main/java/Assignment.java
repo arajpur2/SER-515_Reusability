@@ -13,9 +13,7 @@ import java.text.DateFormat;
 public class Assignment {
 
   protected String assName;
-  protected String strAssignmentFilename;
   protected Date dueDate = new Date();
-  protected String assSpec;
   protected SolutionList theSolutionList = new SolutionList();
   protected Solution suggestSolution = new Solution();
 
@@ -30,21 +28,13 @@ public class Assignment {
     this.dueDate = theDueDate;
   }
 
-  public void setAssSpec(String theSpec){
-    this.assSpec = theSpec;
-  }
-
   public boolean isOverDue(){
     Date today;
     today = new Date();
-    if (today.after(this.dueDate)) {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return today.after(this.dueDate);
   }
 
+  @SuppressWarnings({"unused", "UnnecessaryLocalVariable"})
   public Solution addSolution(){
     Solution mySolution = new Solution();
     return mySolution;
@@ -60,9 +50,6 @@ public class Assignment {
   }
 
   public void submitSolution(){
-  }
-
-  public void getSolutionList(){
   }
 
   public Solution getSuggestSolution() {
@@ -81,6 +68,7 @@ public class Assignment {
     return (Solution)Iterator.next(studentName);
   }
 
+  @SuppressWarnings("unused")
   public Solution getSugSolution(){
     return suggestSolution;
   }
@@ -89,6 +77,7 @@ public class Assignment {
     return dueDate;
   }
 
+  @SuppressWarnings("UnnecessaryLocalVariable")
   public SolutionIterator getSolutionIterator() {
     SolutionIterator theSolutionIterator=new SolutionIterator(theSolutionList);
     return theSolutionIterator;

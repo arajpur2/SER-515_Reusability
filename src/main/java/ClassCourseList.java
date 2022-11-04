@@ -15,11 +15,12 @@ public class ClassCourseList extends ArrayList<Course> {
 	public ClassCourseList() {
 	}
 
-	//// initialize the list by reading from the file.
+	// initialize the list by reading from the file.
+	@SuppressWarnings({"SameParameterValue", "unused"})
 	void initializeFromFile(String theFileName) {
 		try {
 			BufferedReader file;
-			String strCourseName = null;
+			String strCourseName;
 			file = new BufferedReader(new FileReader("CourseInfo.txt"));
 			while ((strCourseName = file.readLine()) != null) {
 				Course theCourse;
