@@ -6,13 +6,12 @@ import java.util.*;
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
  *
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
 public class StudentAssignmentMenu extends AssignmentMenu {
 
-////  class AssignmentMenu
 	private boolean boolSubmit = false;
 
 	JLabel lAssignmentName = new JLabel();
@@ -37,6 +36,8 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 		}
 	}
 
+	/*
+	* to initialize and create the GUI for the menu of assignment objects in the current user object*/
 	private void jbInit() {
 		jLabel1.setText("Assignment : ");
 		jLabel1.setBounds(new Rectangle(20, 36, 91, 18));
@@ -90,14 +91,14 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 			tbSolution.setText("");
 			lGrade.setText("-1");
 		} else {
-			tbSolution.setText(theSolution.SolutionFileName);
+			tbSolution.setText(theSolution.solutionFileName);
 			lGrade.setText(theSolution.getGradeString());
 
 		}
 
 		lAssignmentName.setText(assignment.assName);
 		lDueDate.setText(assignment.dueDate.toString());
-		lSuggestedSolution.setText(assignment.suggestSolution.SolutionFileName);
+		lSuggestedSolution.setText(assignment.suggestSolution.solutionFileName);
 
 		setVisible(true);
 
@@ -107,7 +108,7 @@ public class StudentAssignmentMenu extends AssignmentMenu {
 				assignment.addSolution(theSolution);
 			}
 			theSolution.theAuthor = thePerson.UserName;
-			theSolution.SolutionFileName = tbSolution.getText();
+			theSolution.solutionFileName = tbSolution.getText();
 			theSolution.theSubmitData = new Date();
 		}
 	}

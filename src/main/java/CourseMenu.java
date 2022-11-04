@@ -8,7 +8,7 @@ import java.awt.event.*;
  * Description:
  * Copyright:    Copyright (c) 2002
  * Company:      msu
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
@@ -41,6 +41,7 @@ abstract public class CourseMenu extends JDialog
     setSize(503,294);
   }
 
+  // initializing the GUI
   private void jbInit() {
     buttonChangeCourse.setText("ChangeCourse");
     buttonChangeCourse.setBounds(new Rectangle(101, 211, 73, 37));

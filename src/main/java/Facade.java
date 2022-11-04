@@ -3,12 +3,11 @@ import java.io.*;
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
  *
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  * @author mjfindler
  * @version 2.0
- *
- *          Update to Java 8
+ * Update to Java 8
  */
 
 public class Facade {
@@ -20,6 +19,7 @@ public class Facade {
 	public Facade() {
 	}
 
+	// initialize and display the login GUI
 	static public boolean login(UserInfoItem userinfoItem) {
 		Login login = new Login();
 		login.setModal(true);
@@ -29,16 +29,15 @@ public class Facade {
 		return login.isExit();
 	}
 
-/////////////////////////
-//functions for CourseMenu
-	/*
-	 * When click the add button of the CourseMenu , call this function
-	 * It will be an assignment fill the required infomation this function
-	 * will call InstructorAssignmentMenu or StudentAssignmentMenu according to the
-	 * type of the user it will not update the course menu. the coursemenu need to
-	 * refreshed outside the function
-	 */
 
+	/*
+	 * When click the add button of the CourseMenu , you call this function.
+	 * to fill an assignment with the required information.
+	 * It will call InstructorAssignmentMenu or StudentAssignmentMenu according to the
+	 * type of the user.
+	 * it will not update the course menu.
+	 * the courseMenu needs to refreshed outside this function
+	 */
 	void addAssignment(Course theCourse) {
 		AssignmentMenu theAssignmentMenu;
 		if (thePerson.type == 0)/// student
@@ -52,12 +51,13 @@ public class Facade {
 		theCourse.addAssignment(theAssignment);
 	}
 
+
 	/*
-	 * When click the view button of the CourseMenu , call this function and pass
-	 * the pointer of the Assignment and the person pointer to this function.
-	 * It will new an assignment fill the required information this function
-	 * will call InstructorAssignmentMenu or StudentAssignmentMenu according to the
-	 * type of the user
+	 * When you click the view button of the CourseMenu , this function is called
+	 * a pointer of the assignment and the person is also passed to this function.
+	 * It will call InstructorAssignmentMenu or StudentAssignmentMenu according to the
+	 * type of the user.
+	 * it will not update the course menu.
 	 */
 	void viewAssignment(Assignment theAssignment) {
 		AssignmentMenu theAssignmentMenu;
@@ -71,17 +71,18 @@ public class Facade {
 		theAssignmentMenu.showMenu(theAssignment, thePerson);
 	}
 
-//functions for InstructorAssignmentMenu
 	/*
-	 * this function will grade the give Solution: theSolution this function calls
+	 * to grade the given Solution
 	 */
-
 	@SuppressWarnings("unused")
 	void gradeSolution(Solution theSolution) {
 		SolutionMenu solutionMenu = new SolutionMenu();
 		solutionMenu.ShowMenu(theSolution);
 	}
 
+	/*
+	* to save and publish/update the grade in the student object
+	* */
 	@SuppressWarnings("unused")
 	void reportSolutions(Assignment theAssignment) {
 		Solution theSolution;
@@ -93,26 +94,25 @@ public class Facade {
 			theSolution = (Solution) theSolutionIterator.next();
 		}
 	}
-////////////////////
 
-//functions for StudentAssignmentMenu
-@SuppressWarnings("unused")
-void submitSolution(Assignment theAssignment, Solution theSolution) {
+
+	// to save/add the solution in the solution list
+    @SuppressWarnings("unused")
+    void submitSolution(Assignment theAssignment, Solution theSolution) {
 		theAssignment.addSolution(theSolution);
 	}
 
-//////////
+	// to create a new reminder
 	void remind() {
 		Reminder theReminder = new Reminder();
 		theReminder.showReminder();
 	}
 
+	// to create a new user object (new user info)
 	void createUser(UserInfoItem userinfoitem) {
-		if (userinfoitem.UserType == UserInfoItem.USER_TYPE.Student) /// student
-		{
+		if (userinfoitem.UserType == UserInfoItem.USER_TYPE.Student) {
 			thePerson = new Student();
-		} else /// instructor
-		{
+		} else {
 			thePerson = new Instructor();
 		}
 		thePerson.UserName = userinfoitem.strUserName;
@@ -127,9 +127,10 @@ void submitSolution(Assignment theAssignment, Solution theSolution) {
 	}
 
 	/*
-	 * call this function after create user, create courselist read the
-	 * UserCourse.txt file match the coursename with theCouresList attach the
-	 * Matched course object to the new create user Facade.thePerson.CourseList
+	 * call this function after creating user, creating course list
+	 * read user:course database/file
+	 * to match the course name with course list
+	 * add the matched course object to the new user object's course list
 	 */
 	void attachCourseToUser() {
 		BufferedReader file;
@@ -155,7 +156,7 @@ void submitSolution(Assignment theAssignment, Solution theSolution) {
 	}
 
 	/*
-	 * get the user name from aline UserName:CourseName
+	 * get the username from text file line format UserName:CourseName
 	 */
 	private String getUserName(String aline) {
 		int Sep = aline.lastIndexOf(':');
@@ -163,7 +164,7 @@ void submitSolution(Assignment theAssignment, Solution theSolution) {
 	}
 
 	/*
-	 * get the CourseName from aline UserName:CourseName
+	 * get the CourseName from text file line format UserName:CourseName
 	 */
 	private String getCourseName(String aline) {
 		int Sep = aline.lastIndexOf(':');
@@ -171,10 +172,8 @@ void submitSolution(Assignment theAssignment, Solution theSolution) {
 	}
 
 	/*
-	 * show the course selection dlg, show the course attatched to theperson and
-	 * return the selected course and assign the course to the class member
-	 * theSelecteCourse, the Course Level to CourseLevel CourseLeve=0 High,
-	 * CourseLeve=1 Low
+	 * show the course selection dialog, show the course attached to the person
+	 * return the selected course and assign the course
 	 */
 	public boolean selectCourse() {
 		CourseSelectDlg theDlg = new CourseSelectDlg();
@@ -184,15 +183,10 @@ void submitSolution(Assignment theAssignment, Solution theSolution) {
 		return theDlg.isLogout();
 	}
 
-	/*
-	 * call the thePerson.CreateCourseMenu according to the really object(student or
-	 * instructor) and the nCourseLevel it will call different menu creater and show
-	 * the menu;
-	 */
-
+	// add the selected course object to the menu
 	public boolean courseOperation() {
 		thePerson.createCourseMenu(theSelectedCourse, nCourseLevel);
-		return thePerson.showMenu();//// 0: logout 1 select an other course
+		return thePerson.showMenu();
 	}
 
 	/*

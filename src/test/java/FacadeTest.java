@@ -26,7 +26,7 @@ class FacadeTest {
 
 	@Test
 	void createCourseList() {
-		int expected = 3;
+		int expected = 8;
 		facade.createCourseList();
 		assertEquals(expected, facade.theCourseList.size());
 	}

@@ -9,7 +9,7 @@ public class ClassCourseListTest {
 	@Test
 	void testInitializeFromFile() {
 		classCourseList.initializeFromFile("CourseInfo.txt");
-		assertEquals(3, classCourseList.size());
+		assertEquals(8, classCourseList.size());
 	}
 
 	@Test

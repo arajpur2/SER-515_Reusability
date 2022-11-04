@@ -3,7 +3,7 @@
  * Description:
  * Copyright:    Copyright (c) 2002
  * Company:      msu
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 import java.awt.*;
@@ -14,6 +14,7 @@ public class HighLevelCourseMenu extends CourseMenu {
 	 * JButton AssignmentAddButton = new JButton(); JRadioButton OptionRadio = new
 	 * JRadioButton(); JComboBox OptionCombo = new JComboBox(); JButton
 	 * OptionViewButton = new JButton(); JButton OptionAddButton = new JButton();
+	 * To initialize and display the Course menu GUI and all its components
 	 */
 
 	public HighLevelCourseMenu() {

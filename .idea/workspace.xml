@@ -4,21 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="user courses database created">
+    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="All test cases passed and warnings removed. final commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CourseInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserCourse.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UserCourse.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AssignmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClassCourseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClassCourseList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CourseIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CourseIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CourseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CourseSelectDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CourseSelectDlg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Facade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Hacs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hacs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelCourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelCourseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Instructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Instructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InstructorAssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InstructorAssignmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ListIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelCourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelCourseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NodeVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NodeVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Reminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reminder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReminderVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReminderVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionGradingDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionGradingDlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInfoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInfoItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CourseIteratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseIteratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CourseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ClassCourseListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ClassCourseListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FacadeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FacadeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HacsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HacsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InstructorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ReminderVisitorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ReminderVisitorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HacsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SolutionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SolutionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +48,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,17 +71,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/College Work/Sem 1/Foundations of SE/SER-515_Reusability",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/College Work/Sem 1/Foundations of SE/SER-515_Reusability&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Reusability" />
@@ -61,7 +90,7 @@
       <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Resusability\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Hacs">
     <configuration name="Hacs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Hacs" />
       <module name="SER-515_Resusability.main" />
@@ -69,9 +98,105 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AssignmentTest.getSolution" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;AssignmentTest.getSolution&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SolutionIteratorTest.remove" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SolutionIteratorTest.remove&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SolutionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SolutionTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StudentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;StudentTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Hacs" />
+        <item itemvalue="Gradle.SolutionIteratorTest.remove" />
+        <item itemvalue="Gradle.AssignmentTest.getSolution" />
+        <item itemvalue="Gradle.StudentTest" />
+        <item itemvalue="Gradle.SolutionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667525058945</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="All test cases passed and warnings removed. final commit">
+      <created>1667528015399</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667528015399</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +359,7 @@
     <MESSAGE value="all warnings removed" />
     <MESSAGE value="instructor and student database created" />
     <MESSAGE value="user courses database created" />
-    <option name="LAST_COMMIT_MESSAGE" value="user courses database created" />
+    <MESSAGE value="All test cases passed and warnings removed. final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="All test cases passed and warnings removed. final commit" />
   </component>
 </project>

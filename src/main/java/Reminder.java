@@ -5,7 +5,7 @@ import java.awt.event.*;
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
  *
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
@@ -16,6 +16,7 @@ public class Reminder extends JDialog {
 	java.awt.List listOverdue = new java.awt.List();
 	Button buttonOK = new Button();
 
+	// constructor
 	public Reminder() {
 		try {
 			jbInit();
@@ -26,6 +27,7 @@ public class Reminder extends JDialog {
 		}
 	}
 
+	// initialize and create the GUI for the reminder dialog box
 	private void jbInit() {
 		jLabel1.setText("Upcoming assignments");
 		jLabel1.setBounds(new Rectangle(38, 40, 159, 17));
@@ -44,6 +46,7 @@ public class Reminder extends JDialog {
 		this.getContentPane().add(buttonOK, null);
 	}
 
+	// display the GUI for the reminder dialog box
 	void showReminder() {
 		ReminderVisitor visitor = new ReminderVisitor(this);
 		visitor.visitFacade(Hacs.theFacade);

@@ -4,8 +4,7 @@ import java.awt.event.*;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
- *
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
@@ -33,6 +32,7 @@ public class CourseSelectDlg extends JDialog {
 		}
 	}
 
+	// initialize the GUI for the dialog box/frame with course dropdown menu
 	private void jbInit() {
 		this.getContentPane().setLayout(null);
 		CourseNameCom.setBounds(new Rectangle(155, 41, 203, 22));

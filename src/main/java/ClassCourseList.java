@@ -4,7 +4,7 @@ import java.io.*;
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
  *
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  * @author mjfindler
  * @version 2.0 update to Java 8
@@ -12,9 +12,13 @@ import java.io.*;
 
 public class ClassCourseList extends ArrayList<Course> {
 
+	// constructor
 	public ClassCourseList() {
 	}
 
+	/*
+	* Reading course data from the database(text file)
+	* */
 	// initialize the list by reading from the file.
 	@SuppressWarnings({"SameParameterValue", "unused"})
 	void initializeFromFile(String theFileName) {
@@ -33,6 +37,9 @@ public class ClassCourseList extends ArrayList<Course> {
 		}
 	}
 
+	/*
+	* searching for a course by course name in the course database (text file)
+	* */
 	Course findCourseByCourseName(String courseName) {
 		for (Course course : this) {
 			Course theCourse;

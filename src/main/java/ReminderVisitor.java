@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
  *
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  * @author mjfindler
  * @version 2.0
@@ -23,11 +23,13 @@ public class ReminderVisitor extends NodeVisitor {
 
 	Reminder mReminder;
 
+	// constructor
 	public ReminderVisitor() {
 	}
 
+	// parameterized constructor
 	public ReminderVisitor(Reminder reminder) {
-		mReminder = reminder;
+		this.mReminder = reminder;
 	}
 
 	public void visitFacade(Facade facade) {
@@ -38,10 +40,12 @@ public class ReminderVisitor extends NodeVisitor {
 		}
 	}
 
+	// getter for the reminder object
 	public Reminder getmReminder() {
 		return mReminder;
 	}
 
+	// to visit and mark a course object
 	public void visitCourse(Course course) {
 		Iterator<Assignment> assignmentList = course.assignmentList.listIterator();
 		if (assignmentList.hasNext()) {
@@ -52,6 +56,7 @@ public class ReminderVisitor extends NodeVisitor {
 		}
 	}
 
+	// to visit and mark an assignment object
 	public void visitAssignment(Assignment assignment) {
 		Date today = new Date();
 		Calendar calendar = Calendar.getInstance();
@@ -59,12 +64,13 @@ public class ReminderVisitor extends NodeVisitor {
 		int nToday = calendar.get(Calendar.DAY_OF_YEAR);
 		calendar.setTime(assignment.dueDate);
 		int nDueDate = calendar.get(Calendar.DAY_OF_YEAR);
-		if (nDueDate <= (nToday + 1) && nDueDate >= nToday) {
-			mReminder.listUpcoming.add("today is " + today + " " + assignment.assName + " Due Date is "
-					+ assignment.getDueDateString());
-		}
-		if (nDueDate < nToday) {
-			mReminder.listOverdue.add(assignment.assName + " Due Date is " + assignment.getDueDateString());
+		if(mReminder != null){
+			if (nDueDate <= (nToday + 1) && nDueDate >= nToday) {
+				mReminder.listUpcoming.add("today is " + today + " " + assignment.assName + " Due Date is " + assignment.getDueDateString());
+			}
+			if (nDueDate < nToday) {
+				mReminder.listOverdue.add(assignment.assName + " Due Date is " + assignment.getDueDateString());
+			}
 		}
 
 	}

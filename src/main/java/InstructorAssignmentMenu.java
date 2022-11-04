@@ -8,7 +8,7 @@ import java.text.DateFormat;
  * Description:
  * Copyright:    Copyright (c) 2002
  * Company:      msu
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
@@ -16,8 +16,6 @@ public class InstructorAssignmentMenu extends AssignmentMenu {
   private Assignment theAssignment;
 
   JComboBox<Solution> CombSolutionList = new JComboBox<>();
-////////////////////////
-
 
   JTextField tbAssignmentName = new JTextField();
   JTextField tbDueDate = new JTextField();
@@ -30,6 +28,8 @@ public class InstructorAssignmentMenu extends AssignmentMenu {
   JButton buttonReport = new JButton();
   JButton buttonClose = new JButton();
 
+
+  // constructor
   public InstructorAssignmentMenu() {
     try {
       jbInit();
@@ -39,6 +39,9 @@ public class InstructorAssignmentMenu extends AssignmentMenu {
     }
   }
 
+  /*
+  * initialize and create the GUI for the menu of instructor object's assignments
+  * */
   private void jbInit() {
     jLabel1.setText("Assignment Name");
     jLabel1.setBounds(new Rectangle(25, 31, 118, 18));
@@ -74,13 +77,14 @@ public class InstructorAssignmentMenu extends AssignmentMenu {
     this.getContentPane().add(buttonGrade, null);
     this.getContentPane().add(buttonReport, null);
   }
+
   public void showMenu(Assignment assignment, Person person) {
     theAssignment=assignment;
     tbAssignmentName.setText(theAssignment.assName);
 
     DateFormat theDateFormat=DateFormat.getDateInstance(DateFormat.SHORT );
     tbDueDate.setText(theDateFormat.format(theAssignment.dueDate));
-    tbSuggestedSolution.setText(theAssignment.suggestSolution.SolutionFileName );
+    tbSuggestedSolution.setText(theAssignment.suggestSolution.solutionFileName);
     refreshSolutionList();
     setVisible(true);
   }
@@ -94,7 +98,7 @@ public class InstructorAssignmentMenu extends AssignmentMenu {
     } catch (Exception e1){
       e1.printStackTrace();
     }
-    theAssignment.suggestSolution.SolutionFileName =tbSuggestedSolution.getText() ;
+    theAssignment.suggestSolution.solutionFileName =tbSuggestedSolution.getText() ;
     setVisible(false);
   }
 

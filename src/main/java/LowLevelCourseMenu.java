@@ -3,7 +3,7 @@
  * Description:
  * Copyright:    Copyright (c) 2002
  * Company:      msu
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 import java.awt.*;
@@ -13,6 +13,7 @@ public class LowLevelCourseMenu extends CourseMenu {
 	public LowLevelCourseMenu() {
 	}
 
+	// to display the GUI for the menu of instructor course objects with type = 0
 	void showMenu(Course theCourse) {
 		setVisible(true);
 	}

@@ -11,7 +11,7 @@ class SolutionTest {
 	void ToString() {
 		solution.setTheAuthor("Alok Rajpurohit");
 		solution.setSolutionFileName("Solution");
-		assertEquals("Alok Rajpurohit's Solution Grade = 0 (not reported)", solution.toString());
+		assertEquals("Alok Rajpurohit Solution Grade = 0 (not reported)", solution.toString());
 	}
 
 	@Test

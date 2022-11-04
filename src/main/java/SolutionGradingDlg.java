@@ -5,7 +5,7 @@ import java.awt.event.*;
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
  *
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
@@ -16,6 +16,7 @@ public class SolutionGradingDlg extends JDialog {
 	JButton buttonOK = new JButton();
 	JLabel labelSolutionFileName = new JLabel();
 
+	// constructor
 	public SolutionGradingDlg() {
 		try {
 			jbInit();
@@ -27,7 +28,7 @@ public class SolutionGradingDlg extends JDialog {
 	}
 
 	private void jbInit() {
-		jLabel1.setText("Solution File Name");
+		jLabel1.setText("Enter Grade");
 		jLabel1.setBounds(new Rectangle(23, 30, 121, 18));
 		this.getContentPane().setLayout(null);
 		tfGrad.setBounds(new Rectangle(25, 66, 100, 22));
@@ -44,7 +45,7 @@ public class SolutionGradingDlg extends JDialog {
 	void show(Solution solution) {
 		theSolution = solution;
 		tfGrad.setText("" + theSolution.getGradeInt());
-		labelSolutionFileName.setText(theSolution.SolutionFileName);
+		labelSolutionFileName.setText(theSolution.solutionFileName);
 		setVisible(true);
 	}
 

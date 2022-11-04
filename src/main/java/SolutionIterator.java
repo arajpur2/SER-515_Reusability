@@ -5,7 +5,7 @@ import java.util.Iterator;
  * Description:
  * Copyright:    Copyright (c) 2002
  * Company:      msu
- * @author Zhang ji Zhu Wei
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
@@ -20,23 +20,27 @@ public class SolutionIterator implements Iterator {
     return CurrentSolutionNumber;
   }
 
+  // constructor
   public SolutionIterator() {
   }
 
+  // parameterized constructor
   public SolutionIterator(SolutionList thesolutionlist) {
     solutionlist = thesolutionlist;
     moveToHead();
   }
 
+  // getter for the course list
   public void moveToHead() {
-  //CurrentSolutionNumber: point to the location before the first element
     CurrentSolutionNumber=-1;
   }
 
+  // to check if the solution list has a solution at the next index
   public boolean hasNext() {
     return CurrentSolutionNumber < solutionlist.size() - 1;
   }
 
+  // to get the solution at the next index in the solution list
   public Object next() {
     if (hasNext()) {
       CurrentSolutionNumber ++;
@@ -47,7 +51,7 @@ public class SolutionIterator implements Iterator {
     }
   }
 
-  // get the next Solution that fits the Username;
+  // to get the next solution with the given username in the soution list
   public Object next(String UserName) {
     Solution theSolution;
     theSolution=(Solution)next();
@@ -60,6 +64,7 @@ public class SolutionIterator implements Iterator {
     return null;
   }
 
+  // to remove the current solution from the solution list
   public void remove() {
     solutionlist.remove(CurrentSolutionNumber);
   }

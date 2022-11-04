@@ -5,7 +5,7 @@ import java.util.*;
  * Copyright: Copyright (c) 2002 Company: Department of Computer Science and
  * Engineering, Michigan State University
  *
- * @author Ji Zhang, Wei Zhu
+ * @author Alok Rajpurohit, arajpur@asu.edu
  * @version 1.0
  */
 
@@ -59,10 +59,12 @@ abstract public class Person {
 		return false;
 	}
 
+	// return the list of courses for the current user object
 	public ClassCourseList getCourseList() {
 		return CourseList;
 	}
 
+	// add new course object to the course list
 	public void addCourse(Course theCourse) {
 		CourseList.add(theCourse);
 	}
