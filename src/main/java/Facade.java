@@ -97,7 +97,7 @@ public class Facade {
 
 //functions for StudentAssignmentMenu
 @SuppressWarnings("unused")
-void SubmitSolution(Assignment theAssignment, Solution theSolution) {
+void submitSolution(Assignment theAssignment, Solution theSolution) {
 		theAssignment.addSolution(theSolution);
 	}
 

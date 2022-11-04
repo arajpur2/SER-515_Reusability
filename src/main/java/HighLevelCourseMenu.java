@@ -40,7 +40,7 @@ public class HighLevelCourseMenu extends CourseMenu {
 		assignmentRadio.setText("Assignment");
 		assignmentRadio.setBounds(new Rectangle(21, 55, 103, 26));
 		this.getContentPane().add(assignmentRadio, null);
-		optionRadio.setText("HighLevel Presentation");
+		optionRadio.setText("High Level Presentation");
 		optionRadio.setBounds(new Rectangle(21, 128, 103, 26));
 		this.getContentPane().add(optionRadio, null);
 	}

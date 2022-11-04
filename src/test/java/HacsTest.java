@@ -2,8 +2,9 @@ import org.junit.jupiter.api.Test;
 
 class HacsTest {
 
+	@SuppressWarnings("InstantiationOfUtilityClass")
 	@Test
-	void testHacs() {
+	void Hacs() {
 		new Hacs();
 	}
 }

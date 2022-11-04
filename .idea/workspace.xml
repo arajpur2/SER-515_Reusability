@@ -4,27 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="student test cases created and some warnings removed">
-      <change afterPath="$PROJECT_DIR$/InstructorInfo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentInfo.txt" afterDir="false" />
+    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="user courses database created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AssignmentMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CourseMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CourseSelectDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CourseSelectDlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseInfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CourseInfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserCourse.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UserCourse.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Facade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hacs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hacs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelCourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelCourseMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InstructorAssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InstructorAssignmentMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelCourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelCourseMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NodeVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NodeVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Reminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reminder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionGradingDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionGradingDlg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInfoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInfoItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourseIteratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseIteratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FacadeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FacadeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HacsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HacsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InstructorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ReminderVisitorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ReminderVisitorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StudentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +42,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/College Work/Sem 1/Foundations of SE/SER-515_Reusability/src/test/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/College Work/Sem 1/Foundations of SE/SER-515_Reusability",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Reusability" />
       <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Reusability\src\test\java" />
       <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Reusability\src\main\java" />
       <recent name="D:\College Work\Sem 1\Foundations of SE\SER-515_Resusability\src\main\java" />
@@ -180,7 +175,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667520438261</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="all warnings removed">
+      <created>1667524732942</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667524732942</updated>
+    </task>
+    <task id="LOCAL-00015" summary="instructor and student database created">
+      <created>1667524764189</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667524764189</updated>
+    </task>
+    <task id="LOCAL-00016" summary="user courses database created">
+      <created>1667525058945</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667525058945</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +224,9 @@
     <MESSAGE value="solution iterator tests created" />
     <MESSAGE value="solution test cases created" />
     <MESSAGE value="student test cases created and some warnings removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="student test cases created and some warnings removed" />
+    <MESSAGE value="all warnings removed" />
+    <MESSAGE value="instructor and student database created" />
+    <MESSAGE value="user courses database created" />
+    <option name="LAST_COMMIT_MESSAGE" value="user courses database created" />
   </component>
 </project>

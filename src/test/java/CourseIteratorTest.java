@@ -11,7 +11,7 @@ public class CourseIteratorTest {
 	@Test
 	void courseIteratorClassCourseList() {
 		int expected = 1;
-		Course course = new Course("SER:515", 1);
+		Course course = new Course("SER515", 1);
 		classCourseList.add(course);
 		courseIterator = new CourseIterator(classCourseList);
 		assertEquals(expected, courseIterator.getTheCourseList().size());
@@ -19,7 +19,7 @@ public class CourseIteratorTest {
 
 	@Test
 	void hasNext() {
-		Course course = new Course("SER:515", 1);
+		Course course = new Course("SER515", 1);
 		classCourseList.add(course);
 		CourseIterator courseIterator = new CourseIterator(classCourseList);
 		Assertions.assertTrue(courseIterator.hasNext());
@@ -27,7 +27,7 @@ public class CourseIteratorTest {
 
 	@Test
 	void next() {
-		Course course = new Course("SER:515", 1);
+		Course course = new Course("SER515", 1);
 		classCourseList.add(course);
 		CourseIterator courseIterator = new CourseIterator(classCourseList);
 		Assertions.assertNotNull(courseIterator.next());
@@ -36,7 +36,7 @@ public class CourseIteratorTest {
 	@Test
 	void remove() {
 		int expected = 0;
-		Course course = new Course("SER:515", 1);
+		Course course = new Course("SER515", 1);
 		classCourseList.add(course);
 		CourseIterator courseIterator = new CourseIterator(classCourseList);
 		courseIterator.next();
@@ -46,10 +46,10 @@ public class CourseIteratorTest {
 
 	@Test
 	void nextString() {
-		Course course = new Course("SER:515", 1);
+		Course course = new Course("SER515", 1);
 		classCourseList.add(course);
 		CourseIterator courseIterator = new CourseIterator(classCourseList);
-		Assertions.assertNotNull(courseIterator.next("SER:515"));
+		Assertions.assertNotNull(courseIterator.next("SER515"));
 	}
 
 }

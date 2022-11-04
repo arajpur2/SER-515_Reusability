@@ -58,7 +58,7 @@ public class AssignmentTest {
 
 	@Test
 	void testToString() {
-		String input = "SER-515: Testing and Reuse";
+		String input = "SER515: Testing and Reuse";
 		assignment.setAssName(input);
 		assertEquals(input, assignment.toString());
 	}

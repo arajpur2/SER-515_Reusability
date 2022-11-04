@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class CourseTest {
 
-	String strCourse = "SER 515";
+	String strCourse = "SER515";
 	int theLevel = 0;
 	Course course = new Course(strCourse, theLevel);
 	Assignment assignment = new Assignment();

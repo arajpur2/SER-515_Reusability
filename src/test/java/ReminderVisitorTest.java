@@ -10,7 +10,7 @@ class ReminderVisitorTest {
 	void visitAssignment() {
 		ReminderVisitor reminderVisitor = new ReminderVisitor(new Reminder());
 		Assignment assignment = new Assignment();
-		assignment.setAssName("SER:515");
+		assignment.setAssName("SER515");
 		assignment.setDueDate(new Date());
 		reminderVisitor.visitAssignment(assignment);
 		assertNotNull(reminderVisitor.getmReminder().listUpcoming);

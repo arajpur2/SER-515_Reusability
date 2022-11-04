@@ -8,7 +8,7 @@ class InstructorTest {
 
 	@Test
 	void testCreateCourseMenu() {
-		CourseMenu courseMenu = instructor.createCourseMenu(new Course("SER:515", 0), 0);
+		CourseMenu courseMenu = instructor.createCourseMenu(new Course("SER515", 0), 0);
 		Assertions.assertTrue(courseMenu instanceof HighLevelCourseMenu);
 	}
 
