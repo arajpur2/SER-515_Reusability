@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 /**
  * Title: HACS Description: Copyright: Copyright (c) 2002 Company: msu
- * 
+ *
  * @author Zhang ji Zhu Wei
  * @version 1.0
  */
@@ -26,18 +26,14 @@ public class SolutionGradingDlg extends JDialog {
 		}
 	}
 
-	private void jbInit() throws Exception {
+	private void jbInit() {
 		jLabel1.setText("Solution File Name");
 		jLabel1.setBounds(new Rectangle(23, 30, 121, 18));
 		this.getContentPane().setLayout(null);
 		tfGrad.setBounds(new Rectangle(25, 66, 100, 22));
 		buttonOK.setText("OK");
 		buttonOK.setBounds(new Rectangle(217, 67, 79, 29));
-		buttonOK.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				buttonOK_actionPerformed(e);
-			}
-		});
+		buttonOK.addActionListener(this::buttonOKActionPerformed);
 		labelSolutionFileName.setBounds(new Rectangle(212, 34, 163, 18));
 		this.getContentPane().add(jLabel1, null);
 		this.getContentPane().add(tfGrad, null);
@@ -49,12 +45,12 @@ public class SolutionGradingDlg extends JDialog {
 		theSolution = solution;
 		tfGrad.setText("" + theSolution.getGradeInt());
 		labelSolutionFileName.setText(theSolution.SolutionFileName);
-		show();
+		setVisible(true);
 	}
 
-	void buttonOK_actionPerformed(ActionEvent e) {
+	void buttonOKActionPerformed(ActionEvent e) {
 		theSolution.theGrade = Integer.parseInt(tfGrad.getText());
-		hide();
+		setVisible(false);
 	}
 
 }

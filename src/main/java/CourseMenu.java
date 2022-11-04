@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.Iterator;
 
 
 /**
@@ -18,55 +17,39 @@ abstract public class CourseMenu extends JDialog
   Course theCourse;
   boolean bLogout=true;
 
-  JRadioButton AssignmentRadiao = new JRadioButton();
-  JComboBox AssignmentCombox = new JComboBox();
-  JButton AssignmentViewButton = new JButton();
-  JButton AssignmentAddButton = new JButton();
-  JRadioButton OptionRadio = new JRadioButton();
-  JLabel AssignmentContentLable = new JLabel();
-  JComboBox OptionCombo = new JComboBox();
-  JButton OptionViewButton = new JButton();
-  JButton OptionAddButton = new JButton();
+  JRadioButton assignmentRadio = new JRadioButton();
+  JComboBox<Assignment> assignmentCombo = new JComboBox<>();
+  JButton assignmentViewButton = new JButton();
+  JButton assignmentAddButton = new JButton();
+  JRadioButton optionRadio = new JRadioButton();
+  JLabel assignmentContentLabel = new JLabel();
+  @SuppressWarnings("rawtypes")
+  JComboBox optionCombo = new JComboBox();
+  JButton optionViewButton = new JButton();
+  JButton optionAddButton = new JButton();
   JButton buttonChangeCourse = new JButton();
   JButton buttonLogout = new JButton();
 
-  public CourseMenu()
-  {
-
-    try
-    {
+  public CourseMenu() {
+    try {
       jbInit();
     }
-    catch(Exception e)
-    {
+    catch(Exception e) {
       e.printStackTrace();
     }
     setModal(true);
     setSize(503,294);
   }
 
-  private void jbInit() throws Exception
-  {
+  private void jbInit() {
     buttonChangeCourse.setText("ChangeCourse");
     buttonChangeCourse.setBounds(new Rectangle(101, 211, 73, 37));
-    buttonChangeCourse.addActionListener(new ActionListener()
-    {
-      public void actionPerformed(ActionEvent e)
-      {
-        buttonChangeCourse_actionPerformed(e);
-      }
-    });
+    buttonChangeCourse.addActionListener(this::buttonChangeCourseActionPerformed);
     this.getContentPane().setLayout(null);
     this.setTitle("");
     buttonLogout.setText("Logout");
     buttonLogout.setBounds(new Rectangle(267, 215, 73, 37));
-    buttonLogout.addActionListener(new ActionListener()
-    {
-      public void actionPerformed(ActionEvent e)
-      {
-        buttonLogout_actionPerformed(e);
-      }
-    });
+    buttonLogout.addActionListener(this::buttonLogoutActionPerformed);
     this.getContentPane().add(buttonChangeCourse, null);
     this.getContentPane().add(buttonLogout, null);
   }
@@ -79,44 +62,42 @@ abstract public class CourseMenu extends JDialog
   function of facade, after that refresh window
   */
 
-  abstract void ShowMenu(Course theCourse);
-  abstract void ShowAddButtons();
-  abstract void ShowViewButtons();
-  abstract void ShowRadios();
-  abstract void ShowComboxes();
-  abstract void ShowLabel();
+  @SuppressWarnings("unused")
+  abstract void showMenu(Course theCourse);
+  abstract void showAddButtons();
+  abstract void showViewButtons();
+  abstract void showRadios();
+  abstract void showComboxes();
+  @SuppressWarnings("unused")
+  abstract void showLabel();
 
-  void AssignmentAddButton_actionPerformed(ActionEvent e)
-  {
-    Hacs.theFacade.AddAssignment(theCourse);
+  void assignmentAddButtonActionPerformed() {
+    Hacs.theFacade.addAssignment(theCourse);
     refresh();
   }
-  void AssignmentViewButton_actionPerformed(ActionEvent e)
-  {
-    Assignment theAss=(Assignment)AssignmentCombox.getSelectedItem() ;
-    Hacs.theFacade.ViewAssignment(theAss);
+
+  void assignmentViewButtonActionPerformed() {
+    Assignment theAss=(Assignment) assignmentCombo.getSelectedItem() ;
+    Hacs.theFacade.viewAssignment(theAss);
   }
-  void refresh()
-  {
-    AssignmentCombox.removeAllItems() ;
-    Iterator Iter=theCourse.assignmentList.iterator() ;
-    while(Iter.hasNext() )
-    {
-      AssignmentCombox.addItem(Iter.next() );
+
+  void refresh() {
+    assignmentCombo.removeAllItems() ;
+    for (Assignment assignment : theCourse.assignmentList) {
+      assignmentCombo.addItem(assignment);
     }
   }
 
-  void buttonChangeCourse_actionPerformed(ActionEvent e)
-  {
+  void buttonChangeCourseActionPerformed(ActionEvent e) {
     bLogout=false;
-    hide();
+    setVisible(false);
   }
 
-  void buttonLogout_actionPerformed(ActionEvent e)
-  {
+  void buttonLogoutActionPerformed(ActionEvent e) {
     bLogout=true;
-    hide();
+    setVisible(false);
   }
+
   boolean ifLogout()
   {
     return bLogout;

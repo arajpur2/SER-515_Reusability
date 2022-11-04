@@ -12,13 +12,10 @@ import java.text.DateFormat;
  * @version 1.0
  */
 
-public class InstructorAssignmentMenu extends AssignmentMenu
-{
-////  class AssignmentMenu
-  private boolean bSubmit=false;
-  private Solution theSolution;
+public class InstructorAssignmentMenu extends AssignmentMenu {
   private Assignment theAssignment;
-  JComboBox CombSolutionList = new JComboBox();
+
+  JComboBox<Solution> CombSolutionList = new JComboBox<>();
 ////////////////////////
 
 
@@ -33,19 +30,16 @@ public class InstructorAssignmentMenu extends AssignmentMenu
   JButton buttonReport = new JButton();
   JButton buttonClose = new JButton();
 
-  public InstructorAssignmentMenu()
-  {
-    try
-    {
+  public InstructorAssignmentMenu() {
+    try {
       jbInit();
     }
-    catch(Exception e)
-    {
+    catch(Exception e) {
       e.printStackTrace();
     }
   }
-  private void jbInit() throws Exception
-  {
+
+  private void jbInit() {
     jLabel1.setText("Assignment Name");
     jLabel1.setBounds(new Rectangle(25, 31, 118, 18));
     this.getContentPane().setLayout(null);
@@ -61,31 +55,13 @@ public class InstructorAssignmentMenu extends AssignmentMenu
     tbSuggestedSolution.setBounds(new Rectangle(197, 149, 339, 22));
     buttonGrade.setText("Grade");
     buttonGrade.setBounds(new Rectangle(458, 199, 79, 29));
-    buttonGrade.addActionListener(new ActionListener()
-    {
-      public void actionPerformed(ActionEvent e)
-      {
-        buttonGrade_actionPerformed(e);
-      }
-    });
+    buttonGrade.addActionListener(this::buttonGradeActionPerformed);
     buttonReport.setText("Report");
     buttonReport.setBounds(new Rectangle(365, 249, 79, 29));
-    buttonReport.addActionListener(new ActionListener()
-    {
-      public void actionPerformed(ActionEvent e)
-      {
-        buttonReport_actionPerformed(e);
-      }
-    });
+    buttonReport.addActionListener(this::buttonReportActionPerformed);
     buttonClose.setText("Close");
     buttonClose.setBounds(new Rectangle(86, 253, 79, 29));
-    buttonClose.addActionListener(new ActionListener()
-    {
-      public void actionPerformed(ActionEvent e)
-      {
-        buttonClose_actionPerformed(e);
-      }
-    });
+    buttonClose.addActionListener(this::buttonCloseActionPerformed);
     CombSolutionList.setBounds(new Rectangle(32, 204, 413, 22));
     this.getContentPane().add(jLabel1, null);
     this.getContentPane().add(tbAssignmentName, null);
@@ -98,58 +74,56 @@ public class InstructorAssignmentMenu extends AssignmentMenu
     this.getContentPane().add(buttonGrade, null);
     this.getContentPane().add(buttonReport, null);
   }
-  public void ShowMenu(Assignment assignment, Person person)
-  {
+  public void showMenu(Assignment assignment, Person person) {
     theAssignment=assignment;
-    Solution theSolution;
     tbAssignmentName.setText(theAssignment.assName);
 
     DateFormat theDateFormat=DateFormat.getDateInstance(DateFormat.SHORT );
     tbDueDate.setText(theDateFormat.format(theAssignment.dueDate));
     tbSuggestedSolution.setText(theAssignment.suggestSolution.SolutionFileName );
     refreshSolutionList();
-    show();
+    setVisible(true);
   }
 
-  void buttonClose_actionPerformed(ActionEvent e)
-  {
+  void buttonCloseActionPerformed(ActionEvent e) {
     theAssignment.assName = tbAssignmentName.getText() ;
     DateFormat tempDateFormat=DateFormat.getDateInstance(DateFormat.SHORT );
     try
     {
       theAssignment.dueDate =tempDateFormat.parse(tbDueDate.getText() );
-    }catch (Exception ee){};
+    } catch (Exception e1){
+      e1.printStackTrace();
+    }
     theAssignment.suggestSolution.SolutionFileName =tbSuggestedSolution.getText() ;
-    hide();
+    setVisible(false);
   }
 
-  void buttonGrade_actionPerformed(ActionEvent e)
-  {
+  void buttonGradeActionPerformed(ActionEvent e) {
     Solution theSolution=(Solution)CombSolutionList.getSelectedItem() ;
     if (theSolution==null)
        return;
-    SolutionGradingDlg dlg=new SolutionGradingDlg();
+    SolutionGradingDlg dlg = new SolutionGradingDlg();
     dlg.show(theSolution);
     refreshSolutionList();
   }
 
-  void buttonReport_actionPerformed(ActionEvent e)
-  {
-    SolutionIterator iter=new SolutionIterator(theAssignment.theSolutionList );
-    while(iter.hasNext() )
+  void buttonReportActionPerformed
+          (ActionEvent e) {
+    SolutionIterator iterator = new SolutionIterator(theAssignment.theSolutionList );
+    while(iterator.hasNext() )
     {
-      Solution asolution=(Solution)iter.next();
-      asolution.setReported(true);
+      Solution aSolution = (Solution)iterator.next();
+      aSolution.setReported(true);
     }
     refreshSolutionList();
   }
-  private void refreshSolutionList()
-  {
+  private void refreshSolutionList() {
     CombSolutionList.removeAllItems() ;
-    SolutionIterator SolIter=new SolutionIterator(theAssignment.theSolutionList );
-    while(SolIter.hasNext() )
+    SolutionIterator iterator = new SolutionIterator(theAssignment.theSolutionList );
+    while(iterator.hasNext() )
     {
-      theSolution=(Solution)SolIter.next();
+      //  class AssignmentMenu
+      Solution theSolution = (Solution) iterator.next();
       CombSolutionList.addItem(theSolution);
     }
   }

@@ -14,7 +14,7 @@ import java.util.*;
 
 public class Course {
   String courseName;
-  public ArrayList<Assignment> assignmentList=new ArrayList<Assignment>();
+  public ArrayList<Assignment> assignmentList=new ArrayList<>();
   int numOfAss;
   int courseLevel;
 

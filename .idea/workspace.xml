@@ -4,19 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="solution test cases created">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FacadeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/HacsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SolutionListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StudentTest.java" afterDir="false" />
+    <list default="true" id="2f69a35f-916b-467a-9144-e20365a489e5" name="Changes" comment="student test cases created and some warnings removed">
+      <change afterPath="$PROJECT_DIR$/InstructorInfo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentInfo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AssignmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CourseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CourseSelectDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CourseSelectDlg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Facade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Hacs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hacs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelCourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelCourseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InstructorAssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InstructorAssignmentMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelCourseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelCourseMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NodeVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NodeVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Reminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reminder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionGradingDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionGradingDlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SolutionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SolutionMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StudentAssignmentMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667519653477</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="student test cases created and some warnings removed">
+      <created>1667520438261</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667520438261</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +193,7 @@
     <MESSAGE value="Iterator and visitor tests created" />
     <MESSAGE value="solution iterator tests created" />
     <MESSAGE value="solution test cases created" />
-    <option name="LAST_COMMIT_MESSAGE" value="solution test cases created" />
+    <MESSAGE value="student test cases created and some warnings removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="student test cases created and some warnings removed" />
   </component>
 </project>

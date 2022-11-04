@@ -17,25 +17,23 @@ public class Hacs {
 	}
 
 	public static void main(String[] args) {
-//		String strUsername;
-//		String strUserType = null;
 		UserInfoItem userinfoitem = new UserInfoItem();
-		theFacade.CreateCourseList();
+		theFacade.createCourseList();
 		while (true) {
-			boolean bExit = false;
-			bExit = theFacade.Login(userinfoitem);
+			boolean bExit;
+			bExit = Facade.login(userinfoitem);
 			if (bExit)
 				break;
-			theFacade.CreateUser(userinfoitem);
-			theFacade.AttachCourseToUser();
+			theFacade.createUser(userinfoitem);
+			theFacade.attachCourseToUser();
 			if (userinfoitem.UserType == UserInfoItem.USER_TYPE.Student) // if is a student remind him of the due date
-				theFacade.Remind();
+				theFacade.remind();
 			boolean bLogout = false;
 			while (!bLogout) {
-				bLogout = theFacade.SelectCourse();
+				bLogout = theFacade.selectCourse();
 				if (bLogout)
 					break;
-				bLogout = theFacade.CourseOperation();
+				bLogout = theFacade.courseOperation();
 			}
 		}
 	}

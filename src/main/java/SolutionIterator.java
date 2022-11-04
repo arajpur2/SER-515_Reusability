@@ -9,6 +9,7 @@ import java.util.Iterator;
  * @version 1.0
  */
 
+@SuppressWarnings("rawtypes")
 public class SolutionIterator implements Iterator {
   SolutionList solutionlist;
 
@@ -23,7 +24,7 @@ public class SolutionIterator implements Iterator {
   }
 
   public SolutionIterator(SolutionList thesolutionlist) {
-    solutionlist=thesolutionlist;
+    solutionlist = thesolutionlist;
     moveToHead();
   }
 
